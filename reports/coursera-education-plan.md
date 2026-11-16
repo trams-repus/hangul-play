@@ -1,8 +1,19 @@
 [GPT 교육코스] 강마에 2년 교육계획 — 코세라 강좌별 수강계획
 
-수정: 2026-11-16 08:30 KST · 작성 방식: 코세라 원문 기반 편집·시간 검산. 실제 환경: GPT(Codex), 세부 모델·추론 설정값은 미확인.
+수정: 2026-11-16 09:09 KST · 작성 방식: 코세라 원문 기반 편집·시간 검산. 실제 환경: GPT(Codex), 세부 모델·추론 설정값은 미확인.
 
 주 10시간의 개인 시간 × 연 48주 × 2년 = **960시간**. 코세라 강좌 **785시간**, 로봇 팔 실습 **143.5시간**, 보충 읽기 **31.5시간**. 아래는 실제로 들을 강좌와 수강 범위다.
+
+## 피지컬 AI는 어디서 배우는가
+
+제목의 `-` 뒤에는 이 교육이 쓰이는 분야를 적었다. **로봇 기초·공통기초는 피지컬 AI를 위한 선수학습이며, 학습 모델이 실제 팔을 움직이는 직접 실습은 6분기 ACT부터 시작한다.**
+
+- **3–5분기 — 로봇 기초와 AI 코딩:** [Modern Robotics 1](#q3-3)·[2](#q4-3)·[3](#q5-4)에서 좌표·기구학·동역학을 배우고, [PyTorch 신경망](#q5-1)·[심층학습](#q5-2)으로 모델 학습 코드를 익힌다. [4분기 팔 설치·원격조작](#q4-4)은 실제 팔을 다루는 준비 단계다.
+- **6분기 — 처음 직접 만드는 피지컬 AI:** [Computer Vision](#q6-3)으로 영상 인식을 배운 뒤 [시연 데이터 수집](#q6-6) → [ACT 모방학습·실물 실행](#q6-7)으로 연결한다. 사람이 보여 준 동작을 데이터로 모아 모델을 학습시키고, 그 모델로 작은 팔을 움직인다.
+- **7분기 — 영상·언어·행동을 연결하는 피지컬 AI:** [트랜스포머](#q7-2)·[멀티모달](#q7-3)·[LLM 미세조정](#q7-4)을 배운 뒤 [SmolVLA 직접 실습](#q7-6)에서 카메라 영상과 언어 지시를 로봇 행동으로 연결하고 ACT와 비교한다.
+- **8분기 — 작은 작업으로 통합:** [로봇 제어](#q8-2)·[ROS 상태 표시](#q8-4)와 앞서 학습한 동작을 [트레이 이송 실습](#q8-5)에 연결한다.
+
+ACT·SmolVLA는 별도의 코세라 강좌명이 아니라 위 코세라 선수강좌 뒤에 공식 문서로 수행하는 실물 실습이다. 각 실습 항목에 공식 문서·키트 링크·배정 시간·교육 내용·기대효과를 적었다.
 
 ## 1분기 · 1–3개월 · 현업 필수지식에 전부 집중
 
@@ -11,7 +22,7 @@
 반도체 공정·클린룸·세정·HBM·패키징을 먼저 배운다. 회사 BUSC 자료는 첫 주부터 강좌와 함께 읽는다.
 
 <a id="q1-1"></a>
-### 코세라 01. Semiconductor Manufacturing Fundamentals
+### 코세라 01. Semiconductor Manufacturing Fundamentals - BUSC 기초지식·반도체 제조 개요
 
 **한국어 주제:** 반도체 제조·클린룸 오염 관리
 
@@ -34,7 +45,7 @@
 **후속 학습·기반 지식 활용:** 같은 분기 공정1·클린룸·패키징을 읽는 출발점이다. 회사의 BUSC 실무에서 제조 단계와 청정 환경 조건을 구분하는 데 바로 쓴다.
 
 <a id="q1-2"></a>
-### 코세라 02. Introduction to Semiconductor Process 1
+### 코세라 02. Introduction to Semiconductor Process 1 - BUSC 기초지식·반도체 전공정
 
 **한국어 주제:** 반도체 공정 1
 
@@ -57,7 +68,7 @@
 **후속 학습·기반 지식 활용:** 같은 분기 공정2와 내부 BUSC 자료 읽기에 사용한다. 메모리·기판·이송 공정 설명을 이해하고 습식 세정과 건식 이물 제거를 혼용하지 않는 데 바로 쓴다.
 
 <a id="q1-3"></a>
-### 코세라 03. Cleanroom Fundamentals & Semiconductor Technologies
+### 코세라 03. Cleanroom Fundamentals & Semiconductor Technologies - BUSC 실무지식·클린룸과 오염 관리
 
 **한국어 주제:** 클린룸·반도체 기술
 
@@ -80,7 +91,7 @@
 **후속 학습·기반 지식 활용:** 같은 분기의 BUSC·세정·기판 취급 읽기에 즉시 연결한다. 2분기 계측·수율 해석에서 공기 청정도와 표면 오염을 구분하는 바탕이다.
 
 <a id="q1-4"></a>
-### 강좌 보충 읽기 · 회사 BUSC 자료 1차 읽기
+### 강좌 보충 읽기 · 회사 BUSC 자료 1차 읽기 - BUSC 제품 구조·세정 적용 조건
 
 **교육 링크·자료:** 회사 내부 자료. 아래 교육 내용에 적은 자료명으로 열람한다.
 
@@ -99,7 +110,7 @@
 **후속 학습·기반 지식 활용:** 메모리·트레이·기판·이송·필름에서 BUSC의 건식세정 대상 조건을 이해하는 데 바로 사용한다. 2분기 계측·DoE 후 재독하여 적용 조건의 의미를 더 깊게 읽는다.
 
 <a id="q1-5"></a>
-### 강좌 보충 읽기 · HBM 구조 첫 읽기
+### 강좌 보충 읽기 · HBM 구조 첫 읽기 - HBM 기초지식·적층 메모리 구조
 
 **교육 링크·자료:** [삼성전자 HBM](https://semiconductor.samsung.com/kr/dram/hbm/) · [SK하이닉스 HBM3E 적층](https://news.skhynix.com/en/sk-hynix-begins-volume-production-of-the-world-first-12-layer-hbm3e/)
 
@@ -118,7 +129,7 @@
 **후속 학습·기반 지식 활용:** 같은 분기 패키징·적층 읽기와 3분기 기판·시험 장비 읽기의 바탕이다. HBM 관련 소재·장비 업체의 역할을 이해하는 데 즉시 사용한다.
 
 <a id="q1-6"></a>
-### 코세라 04. Introduction to Semiconductor Process 2
+### 코세라 04. Introduction to Semiconductor Process 2 - HBM 제조공정·식각·증착·CMP
 
 **한국어 주제:** 반도체 공정 2
 
@@ -141,7 +152,7 @@
 **후속 학습·기반 지식 활용:** 같은 분기 패키징 제조와 세정·CMP 읽기에 이어진다. BUSC가 다룰 표면 이물과 식각·배선 등 다른 공정 원인을 구분하는 현재 업무의 기반이다.
 
 <a id="q1-7"></a>
-### 코세라 05. Introduction to Semiconductor Packaging
+### 코세라 05. Introduction to Semiconductor Packaging - HBM·BUSC 관련 지식·패키지와 기판 구조
 
 **한국어 주제:** 반도체 패키징 구조
 
@@ -164,7 +175,7 @@
 **후속 학습·기반 지식 활용:** 같은 분기 패키징 제조·첨단 패키징, 3분기 FC-BGA·핸들러 읽기에 사용한다. 회사의 기판·트레이·이송 분야 기술영업에서 대상물의 구조를 구분한다.
 
 <a id="q1-8"></a>
-### 코세라 06. Semiconductor Packaging Manufacturing
+### 코세라 06. Semiconductor Packaging Manufacturing - BUSC 관련 공정지식·패키지 조립·시험·취급
 
 **한국어 주제:** 반도체 패키징 제조
 
@@ -187,7 +198,7 @@
 **후속 학습·기반 지식 활용:** 같은 분기 세정·기판 취급과 2분기 계측에서 조립·취급·시험 순서를 해석하는 기반이다. BUSC 적용 공정의 앞뒤 단계를 이해하는 데 바로 쓴다.
 
 <a id="q1-9"></a>
-### 코세라 07. Advanced Semiconductor Packaging
+### 코세라 07. Advanced Semiconductor Packaging - HBM 관련 지식·2.5D·3D 패키징
 
 **한국어 주제:** 첨단 반도체 패키징
 
@@ -210,7 +221,7 @@
 **후속 학습·기반 지식 활용:** 같은 분기 HBM 적층·이종 집적 읽기를 구체화한다. 메모리 주변 기판·접속·취급 장비가 담당하는 공정 위치를 이해하는 데 쓴다.
 
 <a id="q1-10"></a>
-### 강좌 보충 읽기 · HBM 적층·이종 집적 읽기
+### 강좌 보충 읽기 · HBM 적층·이종 집적 읽기 - HBM 제조지식·적층과 이종 집적
 
 **교육 링크·자료:** [SK하이닉스 HBM3E 적층](https://news.skhynix.com/en/sk-hynix-begins-volume-production-of-the-world-first-12-layer-hbm3e/) · [삼성전자 이종 집적](https://semiconductor.samsung.com/foundry/advanced-package/advanced-heterogeneous-integration/)
 
@@ -229,7 +240,7 @@
 **후속 학습·기반 지식 활용:** HBM의 구조와 적층·접합·보호 재료를 연결해 현재 소재·장비 설명을 읽는다. 3분기 기판·핸들러 자료를 공정 관점으로 읽는 바탕이다.
 
 <a id="q1-11"></a>
-### 강좌 보충 읽기 · 세정·기판 취급 읽기
+### 강좌 보충 읽기 · 세정·기판 취급 읽기 - BUSC 관련 지식·세정과 재오염
 
 **교육 링크·자료:** [SK하이닉스 CLEAN·CMP](https://news.skhynix.com/en/creating-defectless-wafers-a-look-at-clean-cmp-technology/) · [삼성전자 세정공정](https://semiconductor.samsung.com/kr/support/tools-resources/dictionary/zero-residue-zero-contaminants-semiconductor-cleaning/) · [Entegris 기판 취급](https://www.entegris.com/en/home/our-science/by-solution-area/substrate-handling.html)
 
@@ -256,7 +267,7 @@
 **합계 120시간** — 코세라 112.5시간 · 로봇 팔 0시간 · 읽기 7.5시간.
 
 <a id="q2-1"></a>
-### 강좌 보충 읽기 · 반도체 계측 선수 읽기: PN·MOSFET·I–V
+### 강좌 보충 읽기 · 반도체 계측 선수 읽기: PN·MOSFET·I–V - 반도체 계측 기초·소자 전기특성
 
 **교육 링크·자료:** [MIT PN 접합 I–V: Lecture 14, 인쇄 p2–3](https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-spring-2009/a3aa1722b1c2e732dfe4c4be0c7b0631_MIT6_012S09_lec14.pdf) · [MIT MOSFET I–V: Lecture 8, 인쇄 p2–7·15–17](https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-spring-2009/1aadf127cb5e71ec1577aa244e2b3773_MIT6_012S09_lec08.pdf)
 
@@ -275,7 +286,7 @@
 **후속 학습·기반 지식 활용:** 곧바로 뒤의 계측 기초에서 I–V 곡선의 축·단자·바이어스를 구분하는 데 쓴다. 전기적 결함과 BUSC의 표면 이물 제거 영역을 혼동하지 않는 기반이다.
 
 <a id="q2-2"></a>
-### 코세라 08. Diagnose Yield with Metrology Basics
+### 코세라 08. Diagnose Yield with Metrology Basics - BUSC 관련 지식·반도체 계측과 수율
 
 **한국어 주제:** 계측으로 수율 문제 읽기
 
@@ -298,7 +309,7 @@
 **후속 학습·기반 지식 활용:** 현재 업무에서 측정법·결함 종류·공정 조건을 구분하는 데 먼저 쓴다. 뒤의 통계·DoE는 이 경험의 불확실성과 조건 비교를 정량적으로 보강한다.
 
 <a id="q2-3"></a>
-### 코세라 09. Programming for Everybody (Getting Started with Python)
+### 코세라 09. Programming for Everybody (Getting Started with Python) - 일반 AI·피지컬 AI 공통기초·Python 코딩
 
 **한국어 주제:** 파이썬 프로그래밍 기초
 
@@ -321,7 +332,7 @@
 **후속 학습·기반 지식 활용:** 같은 분기 데이터 구조·확률통계의 Python 과제를 수행하는 데 사용한다. 이후 4분기 머신러닝과 로봇 설정 코드를 읽는 공통 기반이 된다.
 
 <a id="q2-4"></a>
-### 코세라 10. Python Data Structures
+### 코세라 10. Python Data Structures - 일반 AI·피지컬 AI 공통기초·데이터 처리
 
 **한국어 주제:** 파이썬 데이터 구조
 
@@ -344,7 +355,7 @@
 **후속 학습·기반 지식 활용:** 같은 분기 확률통계의 표본 데이터를 읽고 묶는 데 사용한다. 6분기 로봇 시연의 영상·관절값·에피소드 구조를 다루는 바탕이다.
 
 <a id="q2-5"></a>
-### 코세라 11. Probability & Statistics for Machine Learning & Data Science
+### 코세라 11. Probability & Statistics for Machine Learning & Data Science - 반도체 수율 해석·AI 공통기초·확률통계
 
 **한국어 주제:** 머신러닝 확률·통계
 
@@ -367,7 +378,7 @@
 **후속 학습·기반 지식 활용:** 같은 분기 DoE와 BUSC 자료 재독에서 표본·변동·조건 차이를 해석하는 데 쓴다. 4·5분기 머신러닝과 7분기 정책 비교에도 사용한다.
 
 <a id="q2-6"></a>
-### 코세라 12. Optimize Yield with DoE and 8D
+### 코세라 12. Optimize Yield with DoE and 8D - BUSC 관련 지식·공정 실험과 수율 원인 해석
 
 **한국어 주제:** 실험 설계로 수율 원인 구분하기
 
@@ -390,7 +401,7 @@
 **후속 학습·기반 지식 활용:** BUSC 자료의 시험 조건과 비교 가능 범위를 읽는 데 쓴다. 이후 로봇 실습에서 장면·데이터 조건을 통제해 비교하는 기반이 된다.
 
 <a id="q2-7"></a>
-### 강좌 보충 읽기 · 회사 BUSC 자료 2차 읽기
+### 강좌 보충 읽기 · 회사 BUSC 자료 2차 읽기 - BUSC 적용 조건·시험 조건 이해
 
 **교육 링크·자료:** 회사 내부 자료. 아래 교육 내용에 적은 자료명으로 열람한다.
 
@@ -417,7 +428,7 @@
 **합계 120시간** — 코세라 117시간 · 로봇 팔 0시간 · 읽기 3시간.
 
 <a id="q3-1"></a>
-### 코세라 13. Linear Algebra for Machine Learning and Data Science
+### 코세라 13. Linear Algebra for Machine Learning and Data Science - 일반 AI·피지컬 AI 공통수학·벡터와 행렬
 
 **한국어 주제:** 머신러닝·데이터 과학 선형대수
 
@@ -440,7 +451,7 @@
 **후속 학습·기반 지식 활용:** 같은 분기 로봇 좌표 표현과 6분기 최소제곱·SVD에 사용한다. 향후 로봇 SI에서 카메라·작업물·팔 좌표를 연결하는 기반이다.
 
 <a id="q3-2"></a>
-### 코세라 14. Mathematics for Machine Learning: Multivariate Calculus
+### 코세라 14. Mathematics for Machine Learning: Multivariate Calculus - 일반 AI·피지컬 AI 공통수학·미분과 최적화
 
 **한국어 주제:** 머신러닝 다변수 미적분
 
@@ -463,7 +474,7 @@
 **후속 학습·기반 지식 활용:** 4분기 회귀·분류·Jacobian·미분방정식, 5분기 신경망 최적화의 선수다. 로봇+AI 시스템의 오차 변화와 학습 갱신을 이해하는 데 사용한다.
 
 <a id="q3-3"></a>
-### 코세라 15. Modern Robotics, Course 1:  Foundations of Robot Motion
+### 코세라 15. Modern Robotics, Course 1:  Foundations of Robot Motion - 피지컬 AI 로봇 기초·위치·자세·좌표
 
 **한국어 주제:** 로봇 운동의 수학적 기초
 
@@ -486,7 +497,7 @@
 **후속 학습·기반 지식 활용:** 4분기 기구학과 팔 보정으로 이어진다. 회사의 신규 로봇 SI 영역에서 작업 공간·자유도·좌표 표현을 이해하는 기반이다.
 
 <a id="q3-4"></a>
-### 강좌 보충 읽기 · HBM·FC-BGA·테스트 핸들러 읽기
+### 강좌 보충 읽기 · HBM·FC-BGA·테스트 핸들러 읽기 - HBM·BUSC 관련 지식·기판과 테스트 핸들러
 
 **교육 링크·자료:** [삼성전자 HBM](https://semiconductor.samsung.com/kr/dram/hbm/) · [SK하이닉스 HBM3E 적층](https://news.skhynix.com/en/sk-hynix-begins-volume-production-of-the-world-first-12-layer-hbm3e/) · [삼성전기 FC-BGA](https://www.samsungsem.com/global/product/substrate/package-substrate/fcbga.do) · [Advantest 테스트 핸들러](https://www.advantest.com/en/products/component-test-system/test-handler/m5241/)
 
@@ -513,7 +524,7 @@
 **합계 120시간** — 코세라 100.5시간 · 로봇 팔 19.5시간 · 읽기 0시간.
 
 <a id="q4-1"></a>
-### 코세라 16. Supervised Machine Learning: Regression and Classification
+### 코세라 16. Supervised Machine Learning: Regression and Classification - 일반 AI 개발·회귀와 분류
 
 **한국어 주제:** 지도학습: 회귀와 분류
 
@@ -536,7 +547,7 @@
 **후속 학습·기반 지식 활용:** 5분기 신경망·모델 진단과 6분기 영상·ACT의 선수다. 회사의 후속 AI 기능 논의에서 필요한 입력과 정답 데이터의 조건을 이해한다.
 
 <a id="q4-2"></a>
-### 코세라 17. Differential Equations for Engineers
+### 코세라 17. Differential Equations for Engineers - 피지컬 AI 로봇 수학·동작의 시간 변화
 
 **한국어 주제:** 공학 미분방정식 1부
 
@@ -559,7 +570,7 @@
 **후속 학습·기반 지식 활용:** 5분기 동역학과 6분기 미분방정식2부, 8분기 제어에 사용한다. 로봇 동작의 시간 변화와 지연·진동을 이해하는 기반이다.
 
 <a id="q4-3"></a>
-### 코세라 18. Modern Robotics, Course 2:  Robot Kinematics
+### 코세라 18. Modern Robotics, Course 2:  Robot Kinematics - 피지컬 AI 로봇 기초·정기구학과 역기구학
 
 **한국어 주제:** 로봇 기구학
 
@@ -582,7 +593,7 @@
 **후속 학습·기반 지식 활용:** 같은 분기 팔의 좌표·관절 보정과 7·8분기 영상 좌표 기반 집기에 사용한다. 로봇 SI에서 작업 자세·도달 범위를 이해하는 데 쓴다.
 
 <a id="q4-4"></a>
-### 강좌 연계 실습 · 로봇 팔 1단계: 설치·보정·원격조작
+### 강좌 연계 실습 · 로봇 팔 1단계: 설치·보정·원격조작 - 피지컬 AI 실습 준비·로봇 팔 설치와 수동 조작
 
 **교육 링크·자료:** [LeRobot SO-101](https://huggingface.co/docs/lerobot/so101) · [LeRobot 설치](https://huggingface.co/docs/lerobot/installation) · [SO-101 키트 판매처](https://www.seeedstudio.com/SO-101-Assembled-Kit-Pro-p-6691.html)
 
@@ -611,7 +622,7 @@
 **합계 120시간** — 코세라 120시간 · 로봇 팔 0시간 · 읽기 0시간.
 
 <a id="q5-1"></a>
-### 코세라 19. Introduction to Neural Networks and PyTorch
+### 코세라 19. Introduction to Neural Networks and PyTorch - 일반 AI·피지컬 AI 학습 기반·PyTorch 신경망
 
 **한국어 주제:** 신경망·PyTorch 입문
 
@@ -634,7 +645,7 @@
 **후속 학습·기반 지식 활용:** 같은 분기 심층학습과 6분기 ACT, 7분기 트랜스포머 코딩에 사용한다. 회사 피지컬 AI의 학습 코드 구조를 이해하는 기반이다.
 
 <a id="q5-2"></a>
-### 코세라 20. Deep Learning with PyTorch
+### 코세라 20. Deep Learning with PyTorch - 일반 AI·피지컬 AI 인식 기반·심층학습과 CNN
 
 **한국어 주제:** PyTorch 심층학습
 
@@ -657,7 +668,7 @@
 **후속 학습·기반 지식 활용:** 같은 분기 모델 진단과 6분기 영상 처리·ACT, 7분기 멀티모달 학습의 선수다. 로봇 영상 인식의 데이터·학습 조건을 이해하는 데 쓴다.
 
 <a id="q5-3"></a>
-### 코세라 21. Advanced Learning Algorithms
+### 코세라 21. Advanced Learning Algorithms - 일반 AI 개발·모델 오류 분석과 결정 트리
 
 **한국어 주제:** 머신러닝 적용·오차 분석·결정 트리
 
@@ -680,7 +691,7 @@
 **후속 학습·기반 지식 활용:** 6분기 ACT와 7분기 VLA 결과에서 과적합·데이터·모델 선택을 구분하는 데 사용한다. 회사의 로봇 AI 기능 설명에서 오차 원인을 더 구체적으로 이해한다.
 
 <a id="q5-4"></a>
-### 코세라 22. Modern Robotics, Course 3:  Robot Dynamics
+### 코세라 22. Modern Robotics, Course 3:  Robot Dynamics - 피지컬 AI 로봇 기초·동역학과 궤적
 
 **한국어 주제:** 로봇 동역학·궤적 생성
 
@@ -711,7 +722,7 @@
 **합계 120시간** — 코세라 91.5시간 · 로봇 팔 28.5시간 · 읽기 0시간.
 
 <a id="q6-1"></a>
-### 코세라 23. Matrix Methods
+### 코세라 23. Matrix Methods - 피지컬 AI 로봇 비전 수학·좌표 추정
 
 **한국어 주제:** 최소제곱·특이값 분해
 
@@ -734,7 +745,7 @@
 **후속 학습·기반 지식 활용:** 7분기 평면 좌표 추정과 8분기 실제 집기에 사용한다. 카메라–작업대 변환의 잔차와 측정점 배치를 이해하는 기반이다.
 
 <a id="q6-2"></a>
-### 코세라 24. Differential Equations for Engineers
+### 코세라 24. Differential Equations for Engineers - 피지컬 AI 로봇 제어 수학·시간 응답과 안정성
 
 **한국어 주제:** 공학 미분방정식 2부
 
@@ -757,7 +768,7 @@
 **후속 학습·기반 지식 활용:** 8분기 로봇 제어와 반도체 캐리어 동역학의 선수다. 시스템 안정성과 확산 현상을 수식으로 이해하는 데 쓴다.
 
 <a id="q6-3"></a>
-### 코세라 25. Introduction to Computer Vision and Image Processing
+### 코세라 25. Introduction to Computer Vision and Image Processing - 피지컬 AI 인식 기반·카메라 영상과 물체 인식
 
 **한국어 주제:** 컴퓨터 비전·영상 처리
 
@@ -780,7 +791,7 @@
 **후속 학습·기반 지식 활용:** 7분기 평면 영상 좌표 추정·멀티모달, 8분기 집기에 사용한다. 회사 로봇 비전에서 조명·배경·위치 인식 문제를 나누는 기반이다.
 
 <a id="q6-4"></a>
-### 코세라 26. Modern Robotics, Course 4:  Robot Motion Planning and Control
+### 코세라 26. Modern Robotics, Course 4:  Robot Motion Planning and Control - 피지컬 AI 로봇 기초·경로 계획
 
 **한국어 주제:** 로봇 경로 계획
 
@@ -803,7 +814,7 @@
 **후속 학습·기반 지식 활용:** 7분기 좌표 실습과 8분기 로봇 제어·집기에 이어진다. 로봇 SI에서 작업 공간과 장애물을 고려한 경로의 의미를 이해한다.
 
 <a id="q6-5"></a>
-### 코세라 27. Understanding Modern Physics II: Quantum Mechanics and Atoms
+### 코세라 27. Understanding Modern Physics II: Quantum Mechanics and Atoms - 반도체 물리 심화의 기초·양자역학
 
 **한국어 주제:** 현대물리 1부: 양자역학
 
@@ -826,7 +837,7 @@
 **후속 학습·기반 지식 활용:** 7분기 원자 상태와 8분기 반도체 물리의 선수다. 현재 익힌 공정 지식을 밴드·캐리어 수준의 물리 이해로 확장한다.
 
 <a id="q6-6"></a>
-### 강좌 연계 실습 · 로봇 팔 2단계: 시연 데이터 수집
+### 강좌 연계 실습 · 로봇 팔 2단계: 시연 데이터 수집 - 피지컬 AI 직접 실습·로봇 시연 데이터 수집
 
 **교육 링크·자료:** [LeRobot 모방학습](https://huggingface.co/docs/lerobot/il_robots) · [LeRobot 카메라](https://huggingface.co/docs/lerobot/cameras) · [SO-101 키트 판매처](https://www.seeedstudio.com/SO-101-Assembled-Kit-Pro-p-6691.html)
 
@@ -847,7 +858,7 @@
 **필요한 장비·환경:** 같은 팔 세트, 고정 RGB USB 카메라1대, 로컬 저장 공간·블록. 카메라1대의 설정·키 이름을 학습과 실행에서 동일하게 사용한다.
 
 <a id="q6-7"></a>
-### 강좌 연계 실습 · 로봇 팔 3단계: ACT 첫 학습
+### 강좌 연계 실습 · 로봇 팔 3단계: ACT 첫 학습 - 피지컬 AI 직접 실습·ACT 모방학습과 실물 팔 실행
 
 **교육 링크·자료:** [ACT 공식 문서](https://huggingface.co/docs/lerobot/act) · [LeRobot 모방학습](https://huggingface.co/docs/lerobot/il_robots) · [학습용 계산 장비](https://huggingface.co/docs/lerobot/hardware_guide) · [SO-101 키트 판매처](https://www.seeedstudio.com/SO-101-Assembled-Kit-Pro-p-6691.html)
 
@@ -876,7 +887,7 @@
 **합계 120시간** — 코세라 65시간 · 로봇 팔 55시간 · 읽기 0시간.
 
 <a id="q7-1"></a>
-### 코세라 28. Understanding Modern Physics II: Quantum Mechanics and Atoms
+### 코세라 28. Understanding Modern Physics II: Quantum Mechanics and Atoms - 반도체 물리 심화의 기초·원자와 전자 상태
 
 **한국어 주제:** 현대물리 2부: 원자
 
@@ -899,7 +910,7 @@
 **후속 학습·기반 지식 활용:** 8분기 반도체 물리의 밴드·캐리어 통계를 이해하는 기반이다. 메모리의 전기적 동작과 공정·표면 결함의 관계를 더 깊게 읽는다.
 
 <a id="q7-2"></a>
-### 코세라 29. Generative AI Language Modeling with Transformers
+### 코세라 29. Generative AI Language Modeling with Transformers - 일반 AI·피지컬 AI 모델 기반·트랜스포머
 
 **한국어 주제:** 트랜스포머 언어모델 구현
 
@@ -922,7 +933,7 @@
 **후속 학습·기반 지식 활용:** 같은 분기 멀티모달·LLM·SmolVLA의 선수다. 언어 지시와 로봇 행동을 연결하는 모델 구조를 이해하는 기반이다.
 
 <a id="q7-3"></a>
-### 코세라 30. Modern AI Models for Vision and Multimodal Understanding
+### 코세라 30. Modern AI Models for Vision and Multimodal Understanding - 피지컬 AI 모델 기반·영상·언어 멀티모달
 
 **한국어 주제:** 비전·멀티모달 고급 모델
 
@@ -945,7 +956,7 @@
 **후속 학습·기반 지식 활용:** 같은 분기 SmolVLA의 영상·언어·로봇 상태 결합을 이해하는 데 쓴다. 회사의 후속 피지컬 AI 사업에서 대화 모델과 행동 모델의 역할을 구분한다.
 
 <a id="q7-4"></a>
-### 코세라 31. Generative AI with Large Language Models
+### 코세라 31. Generative AI with Large Language Models - 일반 AI 개발·LLM 미세조정과 VLA 선수지식
 
 **한국어 주제:** 대규모 언어모델 기반 생성 AI
 
@@ -968,7 +979,7 @@
 **후속 학습·기반 지식 활용:** 같은 분기 SmolVLA 미세조정의 개념 기반이다. 사전학습 모델 재사용과 작업 데이터 적응의 차이를 회사 기술 논의에서 이해한다.
 
 <a id="q7-5"></a>
-### 강좌 연계 실습 · 로봇 팔 4단계: 평면 영상 좌표·역기구학 연결
+### 강좌 연계 실습 · 로봇 팔 4단계: 평면 영상 좌표·역기구학 연결 - 피지컬 AI 실습 기반·영상 좌표와 로봇 동작 연결
 
 **교육 링크·자료:** [OpenCV 카메라 보정](https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html) · [OpenCV 평면 호모그래피](https://docs.opencv.org/4.x/d9/dab/tutorial_homography.html) · [LeRobot SO-101](https://huggingface.co/docs/lerobot/so101) · [SO-101 키트 판매처](https://www.seeedstudio.com/SO-101-Assembled-Kit-Pro-p-6691.html) · [SO-101 공식 URDF](https://huggingface.co/datasets/lerobot/robot-urdfs/blob/main/so101/so101_new_calib.urdf) · [LeRobot 동작·역기구학 표현](https://huggingface.co/docs/lerobot/action_representations)
 
@@ -989,7 +1000,7 @@
 **필요한 장비·환경:** 팔·고정 카메라, 체커보드, 높이가 일정한 작업대·동일 높이 블록, OpenCV·NumPy·Modern Robotics 시뮬레이션. 카메라 보정 오차를 확인한 뒤 저속으로 움직인다.
 
 <a id="q7-6"></a>
-### 강좌 연계 실습 · 로봇 팔 5단계: ACT·SmolVLA 비교
+### 강좌 연계 실습 · 로봇 팔 5단계: ACT·SmolVLA 비교 - 피지컬 AI 직접 실습·SmolVLA 영상·언어·행동 모델
 
 **교육 링크·자료:** [SmolVLA 공식 문서](https://huggingface.co/docs/lerobot/smolvla) · [ACT 공식 문서](https://huggingface.co/docs/lerobot/act) · [학습용 계산 장비](https://huggingface.co/docs/lerobot/hardware_guide) · [추가 RGB 카메라 판매처](https://www.seeedstudio.com/Camera-Module-OV9732-1MP-100-USB2-0-USB2-0-L38-W38-H16-05mm-p-6982.html) · [카메라 마운트 판매처](https://www.seeedstudio.com/Robot-Arm-Camera-Mount-for-LeRobot-SO-10&reBot-B601-p-7003.html) · [SO-101 키트 판매처](https://www.seeedstudio.com/SO-101-Assembled-Kit-Pro-p-6691.html) · [카메라 키 매핑](https://huggingface.co/docs/lerobot/rename_map)
 
@@ -1018,7 +1029,7 @@
 **합계 120시간** — 코세라 79.5시간 · 로봇 팔 40.5시간 · 읽기 0시간.
 
 <a id="q8-1"></a>
-### 코세라 32. Semiconductor Physics
+### 코세라 32. Semiconductor Physics - HBM·BUSC 관련 반도체 물리 심화·밴드와 캐리어
 
 **한국어 주제:** 반도체 물리 심화
 
@@ -1041,7 +1052,7 @@
 **후속 학습·기반 지식 활용:** 초반에 배운 공정·계측을 캐리어·전류·결함의 물리로 심화한다. BUSC의 표면 세정 범위와 소자 내부의 전기적 원인을 구별하는 기반을 강화한다.
 
 <a id="q8-2"></a>
-### 코세라 33. Modern Robotics, Course 4:  Robot Motion Planning and Control
+### 코세라 33. Modern Robotics, Course 4:  Robot Motion Planning and Control - 피지컬 AI 로봇 기초·추종 제어와 오차 응답
 
 **한국어 주제:** 로봇 추종 제어
 
@@ -1064,7 +1075,7 @@
 **후속 학습·기반 지식 활용:** 바로 뒤 평면 집기와 트레이 동작에서 경로 계획과 추종 제어를 구분하는 데 쓴다. 로봇 SI의 움직임과 오차 응답 이해를 보강한다.
 
 <a id="q8-3"></a>
-### 강좌 연계 실습 · 로봇 팔 6단계: 평면 집기·계획과 학습 비교
+### 강좌 연계 실습 · 로봇 팔 6단계: 평면 집기·계획과 학습 비교 - 피지컬 AI 실습 기반·실물 집기와 학습 방식 비교
 
 **교육 링크·자료:** [OpenCV 카메라 보정](https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html) · [OpenCV 평면 호모그래피](https://docs.opencv.org/4.x/d9/dab/tutorial_homography.html) · [LeRobot SO-101](https://huggingface.co/docs/lerobot/so101) · [SO-101 키트 판매처](https://www.seeedstudio.com/SO-101-Assembled-Kit-Pro-p-6691.html) · [SO-101 공식 URDF](https://huggingface.co/datasets/lerobot/robot-urdfs/blob/main/so101/so101_new_calib.urdf) · [LeRobot 동작·역기구학 표현](https://huggingface.co/docs/lerobot/action_representations)
 
@@ -1085,7 +1096,7 @@
 **필요한 장비·환경:** 팔·고정 카메라, 체커보드, 높이가 일정한 작업대·동일 높이 블록, OpenCV·NumPy·Modern Robotics 시뮬레이션. 카메라 보정 오차를 확인한 뒤 저속으로 움직인다.
 
 <a id="q8-4"></a>
-### 코세라 34. ROS 2 from Scratch
+### 코세라 34. ROS 2 from Scratch - 피지컬 AI 시스템 기초·ROS 통신과 로봇 상태 표시
 
 **한국어 주제:** ROS 2 로봇 소프트웨어
 
@@ -1108,7 +1119,7 @@
 **후속 학습·기반 지식 활용:** 같은 분기 트레이 실습의 관절 상태 표시와 이후 로봇 소프트웨어 학습에 사용한다. 메시지·좌표·구동의 역할을 나누어 로봇 SI 구성을 이해한다.
 
 <a id="q8-5"></a>
-### 강좌 연계 실습 · 로봇 팔 7단계: 트레이 이송 종합 실습
+### 강좌 연계 실습 · 로봇 팔 7단계: 트레이 이송 종합 실습 - 피지컬 AI 직접 실습·학습 모델을 이용한 트레이 이송
 
 **교육 링크·자료:** [LeRobot 모방학습](https://huggingface.co/docs/lerobot/il_robots) · [SmolVLA 공식 문서](https://huggingface.co/docs/lerobot/smolvla) · [SO-101 키트 판매처](https://www.seeedstudio.com/SO-101-Assembled-Kit-Pro-p-6691.html) · [ROS 2 기본 인터페이스 문서](https://github.com/ros2/ros2_documentation/blob/jazzy/source/Concepts/Basic/About-Interfaces.rst)
 
